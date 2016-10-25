@@ -13,6 +13,13 @@ apply plugin: 'idea'
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
+//发布本插件用
+apply plugin: 'maven'
+
+group = 'com.boomstack.nexusupload'
+version = '1.0.0'
+
+
 def compatibilityVersion = 1.7
 sourceCompatibility = compatibilityVersion
 targetCompatibility = compatibilityVersion
@@ -25,3 +32,5 @@ dependencies {
     compile localGroovy()
     compile gradleApi()
 }
+
+apply from: '../bintray.gradle'
